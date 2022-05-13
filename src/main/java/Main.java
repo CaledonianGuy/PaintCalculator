@@ -26,9 +26,9 @@ public class Main {
         boolean test = true;
         String input;
         do {
-//            areaOfWalls += sc.nextDouble();
-//            System.out.println(areaOfWalls);
-//            sc.next();
+            areaOfWalls += sc.nextDouble();
+            System.out.println(areaOfWalls);
+            sc.next();
             System.out.println("More walls to add? Y/N");
             input = sc.nextLine();
             System.out.println(input);
