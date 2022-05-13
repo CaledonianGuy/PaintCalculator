@@ -6,8 +6,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         double areaOfWall = 0;
-        double areaOfWalls = 0;
+        double totalAreaOfWalls = 0;
         double areaToRemove = 0;
+        double totalAreaToRemove = 0;
         double areaToPaint = 0;
         double sizeOfBucket = 0;
         double[] sizeOfBucketsAry;
@@ -20,43 +21,46 @@ public class Main {
 
         System.out.println("\nPlease enter the full area of wall, in meters squared: ");
 //        areaOfWall = sc.nextDouble();
-        //TODO Allow adding more walls
+        //TODO Allow adding more walls -- Complete
         //TODO Validate input
 
-        boolean test = true;
-        String input;
+        boolean running = true;
         do {
-            areaOfWalls += sc.nextDouble();
-            System.out.println(areaOfWalls);
-            sc.next();
+            totalAreaOfWalls += sc.nextDouble();
+
             System.out.println("More walls to add? Y/N");
-            input = sc.nextLine();
-            System.out.println(input);
-            System.out.println(input.equals("N"));
+            String input = sc.next();
+
             if (input.equals("N")) {
-                test = false;
+                running = false;
             } else {
                 System.out.println("Please enter the full area of wall, in meters squared: ");
             }
-//            if (sc.hasNext("[A-Za-z]*")) {
-//
-//            } else {
-//                areaOfWalls += sc.nextDouble();
-//                System.out.println("More walls to add? Y/N");
-//                input = sc.nextLine();
-//                if (input.equals("N")) {
-//                    test = false;
-//                }
-//            }
-        } while (test);
+        } while (running);
 
         System.out.println("\nPlease enter any area you would like to remove (e.g. walls, windows, etc), " +
                 "in meters squared: ");
-        areaToRemove = sc.nextDouble();
-        //TODO Allow adding more object to remove
+//        areaToRemove = sc.nextDouble();
+        //TODO Allow adding more object to remove -- Complete
         //TODO Validate input
 
-        areaToPaint = areaOfWall - areaToRemove;
+        running = true;
+        do {
+            totalAreaToRemove += sc.nextDouble();
+
+            System.out.println("More area to remove? Y/N");
+            String input = sc.next();
+
+            if (input.equals("N")) {
+                running = false;
+            } else {
+                System.out.println("Please enter any area you would like to remove (e.g. walls, windows, etc), " +
+                        "in meters squared: ");
+            }
+        } while (running);
+
+//        areaToPaint = areaOfWall - areaToRemove;
+        areaToPaint = totalAreaOfWalls - totalAreaToRemove;
 
         System.out.println("\nPlease enter size of bucket, in litres: ");
         sizeOfBucket = sc.nextDouble();
@@ -120,6 +124,33 @@ public class Main {
         for (int i = 0; i < sizeOfBuckets.length; ++i) {
             litresNeeded
         }
+
+                boolean test = true;
+        String input;
+        do {
+            areaOfWalls += sc.nextDouble();
+            System.out.println(areaOfWalls);
+            sc.reset();
+            System.out.println("More walls to add? Y/N");
+            input = sc.nextLine();
+            System.out.println(input);
+            System.out.println(input.equals("N"));
+            if (input.equals("N")) {
+                test = false;
+            } else {
+                System.out.println("Please enter the full area of wall, in meters squared: ");
+            }
+//            if (sc.hasNext("[A-Za-z]*")) {
+//
+//            } else {
+//                areaOfWalls += sc.nextDouble();
+//                System.out.println("More walls to add? Y/N");
+//                input = sc.nextLine();
+//                if (input.equals("N")) {
+//                    test = false;
+//                }
+//            }
+        } while (test);
          */
     }
 }
