@@ -19,12 +19,10 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Hi, welcome to paint calculator app!");
 
-//        System.out.println("\nPlease enter the full area of wall, in meters squared: ");
-//        areaOfWall = sc.nextDouble();
         //TODO Allow adding more walls -- Complete
         //TODO Validate input
 
-        System.out.println();
+        System.out.print("\n");
 
         boolean running = true;
         do {
@@ -38,14 +36,10 @@ public class Main {
             running = input.equals("N") ? false : true;
         } while (running);
 
-//        System.out.println("\nPlease enter any area you would like to remove (e.g. walls, windows, etc), " +
-//                "in meters squared: ");
-//        areaToRemove = sc.nextDouble();
         //TODO Allow adding more object to remove -- Complete
         //TODO Validate input
 
-        System.out.println();
-        System.out.println();
+        System.out.print("\n\n");
 
         running = true;
         do {
@@ -60,7 +54,6 @@ public class Main {
             running = input.equals("N") ? false : true;
         } while (running);
 
-//        areaToPaint = areaOfWall - areaToRemove;
         areaToPaint = totalAreaOfWalls - totalAreaToRemove;
 
         System.out.println("\nPlease enter size of bucket, in litres: ");
@@ -68,10 +61,12 @@ public class Main {
         //TODO Allow more bucket sizes
         //TODO Validate input
 
+        System.out.print("\n\n");
+
         numBucketsExact = areaToPaint / (6.5 * sizeOfBucket);
         numBuckets = (int) Math.ceil(numBucketsExact);
 
-        System.out.println("\nNumber of buckets required are: " + numBuckets);
-        System.out.println("\nNumber of buckets required are (exact): " + numBucketsExact);
+        System.out.println("Number of buckets required are: " + numBuckets);
+        System.out.println("Number of buckets required are (exact): " + numBucketsExact);
     }
 }
